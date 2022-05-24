@@ -19,7 +19,15 @@ class CategoriaController
 
     public static function save()
     {
-        var_dump($_POST);
+        include 'Model/CategoriaModel.php';
+
+        $model = new CategoriaModel();
+        $model->categoria = $_POST['Categoria'];
+        $model->descricao = $_POST['Descricao'];
+
+        $model->save();
+
+        header("Location: /categoria");
     }
 }
 ?>

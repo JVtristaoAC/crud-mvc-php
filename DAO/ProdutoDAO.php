@@ -6,22 +6,24 @@ class ProdutoDAO{
 
     public function __construct()
     {
-        $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
+        $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
 
-        $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
+        $this->conexao = new PDO($dsn, 'root', 'etecjau');
     }
 
 
     public function insert(ProdutoModel $model)
     {
-        $sql = "INSERT INTO Pessoa (Produto, Estoque, Preco, ID_categoria) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO Produto (Produto, Estoque, Preco, ID_categoria) VALUES (?, ?, ?, ?)";
          
         $stmt = $this->conexao->prepare($sql);
         
-        $stmt->bindValue(1, $model->Produto); 
-        $stmt->bindValue(2, $model->Estoque);
-        $stmt->bindValue(3, $model->Preco);
-        $stmt->bindValue(4, $model->ID_categoria);
+        $stmt->bindValue(1, $model->produto); 
+        $stmt->bindValue(2, $model->estoque);
+        $stmt->bindValue(3, $model->preco);
+        $stmt->bindValue(4, $model->id_categoria);
+        $stmt->execute();
+
     }
 
     public function update()

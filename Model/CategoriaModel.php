@@ -12,7 +12,15 @@ class CategoriaModel
         $dao = new CategoriaDAO();
 
 
-        $dao->insert($this);
+        if($this->id == null)
+        {
+   
+           $dao->insert($this);
+   
+       }else
+       {
+           echo "update";
+       }
     }
 
 

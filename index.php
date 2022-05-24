@@ -33,7 +33,7 @@ switch($url)
     break;
     
     case '/produto/form/save':
-        PessoaController::save();
+        ProdutoController::save();
     break;
 
     

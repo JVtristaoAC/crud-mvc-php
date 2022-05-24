@@ -19,7 +19,7 @@ class PessoaModel
 
     }else
     {
-        
+        echo "update";
     }
     }
 
@@ -31,6 +31,14 @@ class PessoaModel
 
         $this->rows = $dao->select();
 
+    }
+
+    public function getById(int $id)
+    {
+       include 'DAO/PessoaDAO.php';
+       $dao = new PessoaDAO();
+    
+       return $dao->selectById($id);
     }
 }
 

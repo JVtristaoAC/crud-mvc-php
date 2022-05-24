@@ -7,19 +7,20 @@ class CategoriaDAO
 
     public function __construct()
     {
-        $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
+        $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
 
-        $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
+        $this->conexao = new PDO($dsn, 'root', 'etecjau');
     }
     public function insert(CategoriaModel $model)
     {
         
-        $sql = "INSERT INTO Categoria (Categoria, Descricao) VALUES (?, ?)";
+        $sql = "INSERT INTO categoria (Categoria, Descricao) VALUES (?, ?)";
          
         $stmt = $this->conexao->prepare($sql);
         
         $stmt->bindValue(1, $model->categoria); 
         $stmt->bindValue(2, $model->descricao);
+        $stmt->execute();
 
     }
 
@@ -31,7 +32,7 @@ class CategoriaDAO
 
     public function select()
     {
-        $sql ="SELECT * FROM Categoria";
+        $sql ="SELECT * FROM categoria";
         $stmt = $this->conexao->prepare($sql);
         $stmt->execute();
     

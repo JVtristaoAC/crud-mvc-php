@@ -24,10 +24,10 @@ class ProdutoController
         include 'Model/ProdutoModel.php';
 
         $model = new ProdutoModel();
-        $model->Produto = $_POST['Produto'];
-        $model->Estoque = $_POST['Estoque'];
-        $model->Preco = $_POST['Preco'];
-        $model->ID_categoria = $_POST['Categoria'];
+        $model->produto = $_POST['Produto'];
+        $model->estoque = $_POST['Estoque'];
+        $model->preco = $_POST['Preco'];
+        $model->id_categoria = $_POST['Categoria'];
 
         $model->save();
 

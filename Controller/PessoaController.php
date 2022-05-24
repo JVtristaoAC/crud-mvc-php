@@ -14,6 +14,10 @@
 
     public static function form()
     {
+        include 'Model/PessoaModel.php';
+        $model = new PessoaModel();
+        $model = $model->getByid((int) $_GET['id']);
+        var_dump($model);
         include 'View/Pessoa/frmPessoa.php';
     }
 

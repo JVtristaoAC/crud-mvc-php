@@ -11,8 +11,15 @@ class ProdutoModel
 
         $dao = new ProdutoDAO();
 
+    if($this->id == null){
 
         $dao->insert($this);
+
+    }
+    else{
+        echo "update";
+    }
+    
     }
 
     public function getAllRows()
