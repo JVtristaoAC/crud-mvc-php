@@ -15,6 +15,9 @@
         <th>Nome</th>
         <th>CPF</th>
         <th>Data Nascimento</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
     </tr>
         <?php foreach($model->rows as $item): ?>
 <tr>
@@ -22,6 +25,9 @@
  <td><?= $item->Nome ?></td>
  <td><?= $item->CPF ?></td>
  <td><?= $item->Data_Nascimento ?></td>
+ <td><?= $item->email ?></td>
+ <td><?= $item->telefone ?></td>
+ <td><?= $item->Endereco ?></td>
 </tr>
     <?php endforeach ?>
 </table>

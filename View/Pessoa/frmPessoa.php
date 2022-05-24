@@ -63,6 +63,15 @@
   </div>
 </div>
 
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Categoria">Categoria:</label>  
+  <div class="col-md-4">
+  <input id="Categoria" name="Categoria" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
 <button type="submit">Enviar</button>
 </fieldset>
 </form>
