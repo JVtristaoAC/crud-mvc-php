@@ -7,9 +7,10 @@ class PessoaDAO
 
     public function __construct()
     {
-        $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
-
-        $this->conexao = new PDO($dsn, 'root', 'etecjau');
+        // $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
+        // $this->conexao = new PDO($dsn, 'root', 'etecjau');
+        $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
+        $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
     }
     public function insert(PessoaModel $model)
     {
@@ -70,6 +71,7 @@ class PessoaDAO
     public function delete(int $id)
     {
         $sql ="DELETE FROM Pessoa WHERE id = ? ";
+        
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $id);
         $stmt->execute();

@@ -7,9 +7,10 @@ class CategoriaDAO
 
     public function __construct()
     {
-        $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
-
-        $this->conexao = new PDO($dsn, 'root', 'etecjau');
+        // $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
+        // $this->conexao = new PDO($dsn, 'root', 'etecjau');
+        $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
+        $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
     }
     public function insert(CategoriaModel $model)
     {

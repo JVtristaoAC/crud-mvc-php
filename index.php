@@ -22,6 +22,9 @@ switch($url)
     case '/pessoa/form/save':
         PessoaController::save();
     break;
+    case '/pessoa/delete':
+        PessoaController::delete();
+    break;
 
 
     case '/produto':
@@ -35,6 +38,7 @@ switch($url)
     case '/produto/form/save':
         ProdutoController::save();
     break;
+   
 
     
     case '/categoria':
@@ -48,6 +52,7 @@ switch($url)
     case '/categoria/form/save':
         CategoriaController::save();
     break;
+   
 
     default:
     echo "Erro 404";

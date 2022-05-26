@@ -11,6 +11,7 @@
 
 <table>
     <tr>
+        <th></th>
         <th>Id</th>
         <th>Nome</th>
         <th>CPF</th>
@@ -20,14 +21,39 @@
         <th>Endereço</th>
     </tr>
         <?php foreach($model->rows as $item): ?>
+         
 <tr>
- <td><?= $item->id ?></td>
- <td><?= $item->Nome ?></td>
- <td><?= $item->CPF ?></td>
- <td><?= $item->Data_Nascimento ?></td>
- <td><?= $item->email ?></td>
- <td><?= $item->telefone ?></td>
- <td><?= $item->Endereco ?></td>
+<td>
+   <a href="/pessoa/delete?id=<?= $item->id?>">X</a>
+    </td>
+ <td>
+     <?= $item->id ?>
+</td>
+
+ <td>
+   <a href="/pessoa/form?id=<?= $item->id?>">  <?= $item->Nome ?> </a>
+    </td>
+
+ <td>
+     <?= $item->CPF ?>
+    </td>
+
+ <td>
+     <?= $item->Data_Nascimento ?>
+    </td>
+
+ <td>
+     <?= $item->email ?>
+    </td>
+
+ <td>
+     <?= $item->telefone ?>
+    </td>
+
+ <td>
+     <?= $item->Endereco ?>
+    </td>
+
 </tr>
     <?php endforeach ?>
 </table>

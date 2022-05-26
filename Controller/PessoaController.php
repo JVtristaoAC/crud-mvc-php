@@ -16,8 +16,10 @@
     {
         include 'Model/PessoaModel.php';
         $model = new PessoaModel();
-        $model = $model->getByid((int) $_GET['id']);
-        var_dump($model);
+        
+        if(isset($_GET['id'])) 
+        $model = $model->getById( (int) $_GET['id']);
+        
         include 'View/Pessoa/frmPessoa.php';
     }
 
@@ -26,6 +28,7 @@
         include 'Model/PessoaModel.php';
 
         $model = new PessoaModel();
+        $model->id = $_POST['id'];
         $model->nome = $_POST['Nome'];
         $model->cpf = $_POST['CPF'];
         $model->dataNascimento = $_POST['Nascimento'];
@@ -35,6 +38,18 @@
 
 
         $model->save();
+
+        header("Location: /pessoa");
+    }
+
+    public static function delete()
+    {
+        include 'Model/PessoaModel.php';
+
+        $model = new PessoaModel();
+
+         if(isset($_GET['id'])) 
+        $model->delete( (int) $_GET['id']);
 
         header("Location: /pessoa");
     }

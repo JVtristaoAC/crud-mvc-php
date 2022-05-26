@@ -38,8 +38,31 @@ class PessoaModel
        include 'DAO/PessoaDAO.php';
        $dao = new PessoaDAO();
     
-       return $dao->selectById($id);
+
+       $obj = $dao->selectById($id);
+       return($obj) ? $obj : new PessoaModel();
     }
-}
+
+    //    if($obj)
+    //    {
+    //        return $obj;
+    //    } else {
+    //        return new PessoaModel();
+    
+
+    public function delete(int $id)
+    {
+        include 'DAO/PessoaDAO.php';
+
+        $dao = new PessoaDAO();
+
+       $dao->delete($id);
+    }
+
+
+    }
+
+
+
 
 ?>
