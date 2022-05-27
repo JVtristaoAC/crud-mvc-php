@@ -4,6 +4,7 @@ class CategoriaController
 {
     public static function index()
     {
+        
         include 'Model/CategoriaModel.php';
         $model = new CategoriaModel();
         $model->getAllRows();
