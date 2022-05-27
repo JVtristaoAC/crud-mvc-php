@@ -11,15 +11,27 @@
 
 <table>
     <tr>
+        <th></th>
         <th>Id</th>
         <th>Categoria</th>
         <th>Descrição</th>
     </tr>
         <?php foreach($model->rows as $item): ?>
 <tr>
- <td><?= $item->id ?></td>
- <td><?= $item->Categoria ?></td>
- <td><?= $item->Descricao ?></td>
+<td> 
+     <a href="/categoria/delete?id=<?= $item->id?>">X </a>
+    </td>
+ <td>
+    <?= $item->id ?> 
+    </td>
+
+ <td>
+ <a href="/categoria/form?id=<?= $item->id?>"> <?= $item->Categoria ?> </a>
+    </td>
+
+ <td>
+     <?= $item->Descricao ?>
+    </td>
 </tr>
     <?php endforeach ?>
 </table>

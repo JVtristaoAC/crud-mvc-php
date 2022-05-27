@@ -12,14 +12,14 @@ class CategoriaModel
         $dao = new CategoriaDAO();
 
 
-        if($this->id == null)
+        if(empty($this->id))
         {
    
            $dao->insert($this);
    
        }else
        {
-           echo "update";
+        $dao->update($this);
        }
     }
 
@@ -32,6 +32,26 @@ class CategoriaModel
 
         $this->rows = $dao->select();
 
+    }
+
+    public function getById(int $id)
+    {
+       include 'DAO/CategoriaDAO.php';
+       $dao = new CategoriaDAO();
+    
+
+       $obj = $dao->selectById($id);
+       return($obj) ? $obj : new CategoriaModel();
+    }
+
+
+    public function delete(int $id)
+    {
+        include 'DAO/CategoriaDAO.php';
+
+        $dao = new CategoriaDAO();
+
+       $dao->delete($id);
     }
 
     

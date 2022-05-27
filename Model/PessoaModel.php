@@ -12,14 +12,14 @@ class PessoaModel
 
         $dao = new PessoaDAO();
 
-     if($this->id == null)
+     if(empty($this->id))
      {
 
         $dao->insert($this);
 
     }else
     {
-        echo "update";
+        $dao->update($this);
     }
     }
 
@@ -43,11 +43,6 @@ class PessoaModel
        return($obj) ? $obj : new PessoaModel();
     }
 
-    //    if($obj)
-    //    {
-    //        return $obj;
-    //    } else {
-    //        return new PessoaModel();
     
 
     public function delete(int $id)

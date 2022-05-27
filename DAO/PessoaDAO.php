@@ -31,7 +31,7 @@ class PessoaDAO
 
     public function update(PessoaModel $model)
     {
-        $sql = "UPDATE Pessoa SET Nome=?, CPF=?, Data_Nascimento=?, email=?, telefone=?, Endereco=? WHERE id=?";
+        $sql = "UPDATE pessoa SET Nome=?, CPF=?, Data_Nascimento=?, email=?, telefone=?, Endereco=? WHERE id=?";
          
         $stmt = $this->conexao->prepare($sql);
         

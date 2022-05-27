@@ -9,11 +9,13 @@
 <!-- Form Name -->
 <legend>Cadastro de Produtos</legend>
 
+<input type="hidden" value="<?= $model->id ?>" name="id"/>
+
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="Produto">Produto:</label>  
   <div class="col-md-4">
-  <input id="Produto" name="Produto" type="text" placeholder="" class="form-control input-md">
+  <input id="Produto" name="Produto" value="<?= $model->produto ?>" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>
@@ -22,7 +24,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Estoque">Estoque:</label>  
   <div class="col-md-4">
-  <input id="Estoque" name="Estoque" type="text" placeholder="" class="form-control input-md">
+  <input id="Estoque" name="Estoque" value="<?= $model->estoque ?>" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>
@@ -31,7 +33,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Preco">Preço:</label>  
   <div class="col-md-4">
-  <input id="Preco" name="Preco" type="text" placeholder="" class="form-control input-md">
+  <input id="Preco" name="Preco" value="<?= $model->preco ?>" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>

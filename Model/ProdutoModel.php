@@ -3,7 +3,7 @@
 class ProdutoModel
 {
 
-    public $id, $produto, $estoque, $preco, $id_categoria;
+    public $id, $produto, $estoque, $preco, $id_categoria, $rows;
 
     public function save()
     {
@@ -11,13 +11,14 @@ class ProdutoModel
 
         $dao = new ProdutoDAO();
 
-    if($this->id == null){
+    if(empty($this->id)){
 
         $dao->insert($this);
 
     }
     else{
-        echo "update";
+
+        $dao->update($this);
     }
     
     }
@@ -30,6 +31,26 @@ class ProdutoModel
 
         $this->rows = $dao->select();
 
+    }
+
+    public function getById(int $id)
+    {
+       include 'DAO/ProdutoDAO.php';
+       $dao = new ProdutoDAO();
+    
+
+       $obj = $dao->selectById($id);
+       return($obj) ? $obj : new ProdutoModel();
+    }
+
+
+    public function delete(int $id)
+    {
+        include 'DAO/ProdutoDAO.php';
+
+        $dao = new ProdutoDAO();
+
+       $dao->delete($id);
     }
 }
 

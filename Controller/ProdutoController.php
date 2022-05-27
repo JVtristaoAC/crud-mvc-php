@@ -13,14 +13,17 @@ class ProdutoController
 
     public static function form()
     {
+        include 'Model/ProdutoModel.php';
+        $model = new ProdutoModel();
+        
+        if(isset($_GET['id'])) 
+        $model = $model->getById( (int) $_GET['id']);
+        
         include 'View/Produto/frmProduto.php';
     }
 
     public static function save()
     {
-
-
-
         include 'Model/ProdutoModel.php';
 
         $model = new ProdutoModel();
@@ -30,6 +33,18 @@ class ProdutoController
         $model->id_categoria = $_POST['Categoria'];
 
         $model->save();
+
+        header("Location: /produto");
+    }
+
+    public static function delete()
+    {
+        include 'Model/ProdutoModel.php';
+
+        $model = new ProdutoModel();
+
+         if(isset($_GET['id'])) 
+        $model->delete( (int) $_GET['id']);
 
         header("Location: /produto");
     }

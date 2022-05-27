@@ -22,6 +22,7 @@ switch($url)
     case '/pessoa/form/save':
         PessoaController::save();
     break;
+
     case '/pessoa/delete':
         PessoaController::delete();
     break;
@@ -38,6 +39,10 @@ switch($url)
     case '/produto/form/save':
         ProdutoController::save();
     break;
+
+    case '/produto/delete':
+        ProdutoController::delete();
+    break;
    
 
     
@@ -51,6 +56,10 @@ switch($url)
 
     case '/categoria/form/save':
         CategoriaController::save();
+    break;
+
+    case '/categoria/delete':
+        CategoriaController::delete();
     break;
    
 

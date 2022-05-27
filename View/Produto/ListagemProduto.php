@@ -11,6 +11,7 @@
 
 <table>
     <tr>
+        <th></th>
         <th>Id</th>
         <th>Produto</th>
         <th>Estoque</th>
@@ -19,11 +20,28 @@
     </tr>
         <?php foreach($model->rows as $item): ?>
 <tr>
- <td><?= $item->id ?></td>
- <td><?= $item->Produto ?></td>
- <td><?= $item->Estoque ?></td>
- <td><?= $item->Preco ?></td>
- <td><?= $item->ID_categoria ?></td>
+<td>
+   <a href="/produto/delete?id=<?= $item->id?>">X</a>
+    </td>
+
+ <td>
+     <?= $item->id ?>
+    </td>
+
+ <td> 
+     <a href="/produto/form?id=<?= $item->id?>"> <?= $item->Produto ?> </a>
+    </td>
+
+ <td>
+     <?= $item->Estoque ?>
+    </td>
+ <td>
+     <?= $item->Preco ?>
+    </td>
+
+ <td>
+     <?= $item->ID_categoria ?>
+    </td>
 </tr>
     <?php endforeach ?>
 </table>

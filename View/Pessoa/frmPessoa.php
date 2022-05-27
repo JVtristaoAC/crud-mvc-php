@@ -15,7 +15,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Nome">Nome:</label>  
   <div class="col-md-4">
-  <input id="Nome"  name="Nome" value="<?= $model->Nome ?>" type="text"  class="form-control input-md">
+  <input id="Nome"  name="Nome" value="<?= $model->nome ?>" type="text"  class="form-control input-md">
     
   </div>
 </div>
@@ -24,7 +24,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="CPF">CPF:</label>  
   <div class="col-md-4">
-  <input id="CPF"  name="CPF" value="<?= $model->CPF ?>" type="text" class="form-control input-md">
+  <input id="CPF"  name="CPF" value="<?= $model->cpf ?>" type="text" class="form-control input-md">
     
   </div>
 </div>
@@ -60,7 +60,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Endereco">Endereço:</label>  
   <div class="col-md-4">
-  <input id="Endereco"  name="Endereco" value="<?= $model->Endereco ?>" type="text"  class="form-control input-md">
+  <input id="Endereco"  name="Endereco" value="<?= $model->endereco ?>" type="text"  class="form-control input-md">
     
   </div>
 </div>
