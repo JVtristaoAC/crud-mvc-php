@@ -21,6 +21,8 @@ class CategoriaController
             $model = $model->getById( (int) $_GET['id']);
             
             include 'View/Categoria/frmCategoria.php';
+
+            var_dump($model);
        
     }
 
@@ -29,6 +31,7 @@ class CategoriaController
         include 'Model/CategoriaModel.php';
 
         $model = new CategoriaModel();
+        $model->id = $_POST['id'];
         $model->categoria = $_POST['Categoria'];
         $model->descricao = $_POST['Descricao'];
 

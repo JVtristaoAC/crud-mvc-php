@@ -6,10 +6,10 @@ class ProdutoDAO{
 
     public function __construct()
     {
-        // $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
-        // $this->conexao = new PDO($dsn, 'root', 'etecjau');
-        $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
-        $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
+        $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
+        $this->conexao = new PDO($dsn, 'root', 'etecjau');
+        // $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
+        // $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
 
     }
 
@@ -56,7 +56,7 @@ class ProdutoDAO{
     {
         include_once 'Model/ProdutoModel.php';
 
-        $sql = "SELECT * FROM Produto WHERE id = ?";
+        $sql = "SELECT * FROM produto WHERE id = ?";
 
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(1, $id);

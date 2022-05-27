@@ -17,7 +17,9 @@ class ProdutoController
         $model = new ProdutoModel();
         
         if(isset($_GET['id'])) 
-        $model = $model->getById( (int) $_GET['id']);
+            $model = $model->getById( (int) $_GET['id']);
+
+        //var_dump($model);
         
         include 'View/Produto/frmProduto.php';
     }
@@ -27,6 +29,7 @@ class ProdutoController
         include 'Model/ProdutoModel.php';
 
         $model = new ProdutoModel();
+        $model->id = $_POST['id'];
         $model->produto = $_POST['Produto'];
         $model->estoque = $_POST['Estoque'];
         $model->preco = $_POST['Preco'];

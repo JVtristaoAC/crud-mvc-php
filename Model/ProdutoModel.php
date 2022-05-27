@@ -40,7 +40,8 @@ class ProdutoModel
     
 
        $obj = $dao->selectById($id);
-       return($obj) ? $obj : new ProdutoModel();
+       
+       return ($obj) ? $obj : new ProdutoModel();
     }
 
 

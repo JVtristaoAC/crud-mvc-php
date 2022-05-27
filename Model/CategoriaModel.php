@@ -51,7 +51,7 @@ class CategoriaModel
 
         $dao = new CategoriaDAO();
 
-       $dao->delete($id);
+        $dao->delete($id);
     }
 
     

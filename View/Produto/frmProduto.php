@@ -42,7 +42,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Categoria">Categoria:</label>  
   <div class="col-md-4">
-  <input id="Categoria" name="Categoria" type="text" placeholder="" class="form-control input-md">
+  <input id="Categoria" name="Categoria" value="<?= $model->id_categoria ?>" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>

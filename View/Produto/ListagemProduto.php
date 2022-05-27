@@ -29,18 +29,18 @@
     </td>
 
  <td> 
-     <a href="/produto/form?id=<?= $item->id?>"> <?= $item->Produto ?> </a>
+     <a href="/produto/form?id=<?= $item->id?>"> <?= $item->produto ?> </a>
     </td>
 
  <td>
-     <?= $item->Estoque ?>
+     <?= $item->estoque ?>
     </td>
  <td>
-     <?= $item->Preco ?>
+     <?= $item->preco ?>
     </td>
 
  <td>
-     <?= $item->ID_categoria ?>
+     <?= $item->id_categoria ?>
     </td>
 </tr>
     <?php endforeach ?>

@@ -26,11 +26,11 @@
     </td>
 
  <td>
- <a href="/categoria/form?id=<?= $item->id?>"> <?= $item->Categoria ?> </a>
+ <a href="/categoria/form?id=<?= $item->id?>"> <?= $item->categoria ?> </a>
     </td>
 
  <td>
-     <?= $item->Descricao ?>
+     <?= $item->descricao ?>
     </td>
 </tr>
     <?php endforeach ?>
