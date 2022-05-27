@@ -1,29 +1,37 @@
 <?php
-
+//incluindo os arquivos controller para usar os metodos
 include 'Controller/PessoaController.php';
 include 'Controller/ProdutoController.php';
 include 'Controller/CategoriaController.php';
+
+//definindo a varivel URL 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($url)
 {
+
+    
     case '/':
         echo "Página Inicial";
     break;
 
     case '/pessoa':
+        //chamando o metodo index da classe controller
         PessoaController::index();
     break;
 
     case '/pessoa/form':
+        //chamando o metodo form da classe controller
         PessoaController::form();
     break;
 
     case '/pessoa/form/save':
+        //chamando o metodo save da classe controller
         PessoaController::save();
     break;
 
     case '/pessoa/delete':
+        //chamando o metodo delete da classe controller
         PessoaController::delete();
     break;
 
@@ -63,6 +71,7 @@ switch($url)
     break;
    
 
+    //Case por padrão
     default:
     echo "Erro 404";
     break;
