@@ -23,7 +23,7 @@ if(file_exists($classe_controller)){
 
     }
 
-
+// testando push
 });
 
 ?>
