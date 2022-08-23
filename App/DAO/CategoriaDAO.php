@@ -1,5 +1,9 @@
 <?php
 
+namespace App\DAO;
+use \PDO;
+use App\Model\CategoriaModel;
+
 class CategoriaDAO
 {
 
