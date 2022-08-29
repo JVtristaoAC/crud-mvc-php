@@ -6,20 +6,16 @@ use App\Model\PessoaModel;
 {
     public static function index()
     {
-        //incluindo o arquivo PessoaModel.php
-        include 'Model/PessoaModel.php';
         //instanciando a classe PessoaModel
         $model = new PessoaModel();
         //chamando metodo getAllRows da Model
         $model->getAllRows();
         //chamando a Lista de pessoas
-        include 'View/Pessoa/ListagemPessoa.php';
+        include VIEWS . 'Pessoa/ListagemPessoa.php';
     }
 
     public static function form()
     {
-        //incluindo o arquivo PessoaModel.php
-        include 'Model/PessoaModel.php';
         //instanciando a classe PessoaModel
         $model = new PessoaModel();
 
@@ -29,13 +25,12 @@ use App\Model\PessoaModel;
         $model = $model->getById( (int) $_GET['id']);
         
         //chamando o formulário de pessoas
-        include 'View/Pessoa/frmPessoa.php';
+        include VIEWS . 'Pessoa/frmPessoa.php';
     }
 
     public static function save()
     {
-        //incluindo o arquivo PessoaModel.php
-        include 'Model/PessoaModel.php';
+
        //instanciando a classe PessoaModel
         $model = new PessoaModel();
 
@@ -58,9 +53,6 @@ use App\Model\PessoaModel;
 
     public static function delete()
     {
-        //incluindo o arquivo PessoaModel.php
-        include 'Model/PessoaModel.php';
-
        //instanciando a classe PessoaModel
         $model = new PessoaModel();
 

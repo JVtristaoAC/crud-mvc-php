@@ -1,6 +1,12 @@
 <?php
+include 'config.php';
+
+use App\Controller\CategoriaController;
+use App\Controller\PessoaController;
+use App\Controller\ProdutoController;
+
 //incluindo os arquivos controller para usar os metodos
-include 'autoLoad.php';
+
 
 //definindo a varivel URL 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

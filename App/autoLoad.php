@@ -4,7 +4,7 @@ spl_autoload_register(function($ClasseChamada) {
 
 $classe_controller = 'Controller/' . $ClasseChamada . '.php';
 $classe_model = 'Model/' . $ClasseChamada . '.php';
-$classe_dao = 'Controller/' . $ClasseChamada . '.php';
+$classe_dao = 'DAO/' . $ClasseChamada . '.php';
 
 if(file_exists($classe_controller)){
     
