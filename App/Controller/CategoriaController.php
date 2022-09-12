@@ -3,7 +3,7 @@
 namespace App\Controller;
 use App\Model\CategoriaModel;
 
-class CategoriaController
+class CategoriaController extends Controller
 {
     public static function index()
     {
@@ -11,8 +11,8 @@ class CategoriaController
         $model = new CategoriaModel();
         $model->getAllRows();
 
-
-        include VIEWS . 'Categoria/ListagemCategoria.php';
+        parent::render('Categoria/ListagemCategoria', $model);
+        
     }
 
     public static function form(){

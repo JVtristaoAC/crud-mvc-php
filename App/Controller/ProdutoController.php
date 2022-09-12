@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Model\ProdutoModel;
 
-class ProdutoController
+class ProdutoController extends Controller
 {
     public static function index()
     {
@@ -10,7 +10,7 @@ class ProdutoController
         $model = new ProdutoModel();
         $model->getAllRows();
 
-        include 'View/Produto/ListagemProduto.php';
+        parent::render('Produto/ListagemProduto', $model);
     }
 
     public static function form()

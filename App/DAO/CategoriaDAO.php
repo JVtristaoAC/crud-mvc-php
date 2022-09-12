@@ -4,17 +4,14 @@ namespace App\DAO;
 use \PDO;
 use App\Model\CategoriaModel;
 
-class CategoriaDAO
+class CategoriaDAO extends DAO
 {
 
     private $conexao;
 
     public function __construct()
     {
-        $dsn = "mysql:host=localhost:3307;dbname=banco_mvc";
-        $this->conexao = new PDO($dsn, 'root', 'etecjau');
-        // $dsn = "mysql:host=localhost:3306;dbname=banco_mvc";
-        // $this->conexao = new PDO($dsn, 'root', 'nasciEM1606');
+        parent::__construct();
     }
     public function insert(CategoriaModel $model)
     {

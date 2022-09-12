@@ -5,7 +5,7 @@ use App\DAO\ProdutoDAO;
 class ProdutoModel
 {
 
-    public $id, $produto, $estoque, $preco, $id_categoria, $rows;
+    public $id, $produto, $estoque, $preco, $id_categoria;
 
     public function save()
     {

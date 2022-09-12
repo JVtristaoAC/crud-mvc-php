@@ -5,7 +5,7 @@ use App\DAO\CategoriaDAO;
 class CategoriaModel
 {
 
-    public $id, $categoria, $descricao, $rows;
+    public $id, $categoria, $descricao;
 
     public function save()
     {

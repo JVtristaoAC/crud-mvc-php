@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Model\PessoaModel;
 
- class PessoaController
+ class PessoaController extends Controller
 {
     public static function index()
     {
@@ -11,7 +11,7 @@ use App\Model\PessoaModel;
         //chamando metodo getAllRows da Model
         $model->getAllRows();
         //chamando a Lista de pessoas
-        include VIEWS . 'Pessoa/ListagemPessoa.php';
+        parent::render('Pessoa/ListagemPessoa', $model);
     }
 
     public static function form()

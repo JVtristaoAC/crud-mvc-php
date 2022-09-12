@@ -6,7 +6,7 @@ class PessoaModel
 {
 
     //definindo as váriaveis que vão ser utilizadas em toda a classe
-    public $id, $nome, $cpf, $dataNascimento, $email, $telefone, $endereco, $rows;
+    public $id, $nome, $cpf, $dataNascimento, $email, $telefone, $endereco;
     
 
     public function save()

@@ -2,28 +2,16 @@
 
 spl_autoload_register(function($ClasseChamada) {
 
-$classe_controller = 'Controller/' . $ClasseChamada . '.php';
-$classe_model = 'Model/' . $ClasseChamada . '.php';
-$classe_dao = 'DAO/' . $ClasseChamada . '.php';
+ $arquivo = BASEDIR . '/' . $ClasseChamada . 'php';
 
-if(file_exists($classe_controller)){
-    
-    include $classe_controller;
-    
+
+if(file_exists($arquivo)){
+    include $arquivo;
 }
-    else if(file_exists($classe_model)){
-    
-        include $classe_model;
+else{
+    exit('Arquivo não encontrado. Arquivo: ' . $arquivo . "<br />");
+}
 
-    }
-
-    else if(file_exists($classe_dao)){
-     
-        include $classe_dao;
-
-    }
-
-// testando push
 });
 
 ?>
